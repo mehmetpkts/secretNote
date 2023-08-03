@@ -1,5 +1,4 @@
 import tkinter
-from PIL import ImageTk , Image
 
 
 window = tkinter.Tk()
@@ -12,9 +11,10 @@ def button():
 def buttonn():
     pass
 
-img1 = ImageTk.PhotoImage(Image.open("secret.png"))
-label1 = tkinter.Label(window , image=img1)
-label1.pack()
+photo = tkinter.PhotoImage(file="topSecret.png")
+photo_label = tkinter.Label(image=photo)
+photo_label.pack()
+
 
 label2 = tkinter.Label(text="Enter your title")
 label2.pack()
