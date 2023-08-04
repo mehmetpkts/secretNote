@@ -1,6 +1,7 @@
 import tkinter
-from tkinter import messagebox , END
+from tkinter import messagebox , END , LEFT
 import base64
+
 
 window = tkinter.Tk()
 window.title("Secret Notes")
@@ -75,7 +76,7 @@ entry1.pack()
 label3 = tkinter.Label(text="Enter your secret")
 label3.pack()
 
-low_input = tkinter.Text(width=20,height=10)
+low_input = tkinter.Text(width=24,height=20)
 low_input.pack()
 
 label4 = tkinter.Label(text="Enter master key")
@@ -84,10 +85,11 @@ label4.pack()
 entry2 = tkinter.Entry(width=30)
 entry2.pack()
 
-button1 = tkinter.Button(text="Save&Encrypt",command=save_and_encrypt_notes)
+photo1 = tkinter.PhotoImage(file="encrypt.png")
+button1 = tkinter.Button(text="Save&Encrypt",command=save_and_encrypt_notes, image=photo1,width=185,height=50,compound = LEFT)
 button1.pack()
 
-button2 = tkinter.Button(text="Decrypt",command=decrypt_notes)
+button2 = tkinter.Button(text="Decrypt",command=decrypt_notes,width=27,height=3)
 button2.pack()
 
 window.mainloop()
